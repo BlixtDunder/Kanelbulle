@@ -13,7 +13,7 @@ A cookie consent banner, except it's about the other kind of cookie. On October 
 ## Usage
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/BlixtDunder/kanelbulle/kanelbulle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/BlixtDunder/Kanelbulle/kanelbulle.min.js" defer></script>
 ```
 
 jsDelivr minifies `.min.js` automatically. You can also just copy `kanelbulle.js` onto your own server.
