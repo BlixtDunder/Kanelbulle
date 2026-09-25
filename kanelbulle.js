@@ -18,7 +18,7 @@
     necessary: 'Endast n\u00f6dv\u00e4ndiga bullar',
     links: '<a href="{b}">Hitta n\u00e4rmaste bageri</a> eller <a href="{r}">baka sj\u00e4lv</a>.',
     bakeryUrl: 'https://www.google.com/maps/search/bageri',
-    recipeUrl: 'https://www.arla.se/recept/kanelbullar/'
+    recipeUrl: 'https://www2.ankarsrum.com/se/recept/klassiska-kanelbullar-kalljasta'
   } : {
     title: 'Our cinnamon bun policy',
     body: 'The owners of this website support fika, the Swedish coffee break. ' +
@@ -53,23 +53,24 @@
     '<rect x="24" y="19" width="2" height="2" rx=".6"/><rect x="10" y="23" width="2" height="2" rx=".6"/>' +
     '<rect x="17" y="11" width="2" height="2" rx=".6"/><rect x="5" y="16" width="2" height="2" rx=".6"/></g></svg>';
 
-  var dark = '.k{--bg:#000;--fg:#fff;--sh:none}';
+  var dark = '.k{--bg:#000;--fg:#fff;--mu:#c4c4c4;--ul:rgba(255,255,255,.4);--sh:none}';
   var theme = opt.theme === 'dark' ? dark : opt.theme === 'light' ? '' : '@media (prefers-color-scheme:dark){' + dark + '}';
 
   var host = document.createElement('div');
   var root = host.attachShadow ? host.attachShadow({ mode: 'open' }) : host;
   root.innerHTML =
     '<style>' +
-    '.k{--bg:#fff;--fg:#000;--sh:0 4px 32px rgba(0,0,0,.15)}' + theme +
+    '.k{--bg:#fff;--fg:#000;--mu:#4a4a4a;--ul:rgba(0,0,0,.3);--sh:0 4px 32px rgba(0,0,0,.15)}' + theme +
     '.k{position:fixed;z-index:2147483647;' + place + ';box-sizing:border-box;padding:' + (bar ? '24px 32px' : '32px 36px') + ';' +
-    'background:var(--bg);color:var(--fg);box-shadow:var(--sh);font:16px/1.6 "Helvetica Neue",Helvetica,Arial,sans-serif;' +
-    'letter-spacing:.01em;display:flex;gap:' + (bar ? '16px 32px;flex-wrap:wrap;align-items:center' : '20px;flex-direction:column') + '}' +
+    'background:var(--bg);color:var(--fg);box-shadow:var(--sh);-webkit-font-smoothing:antialiased;' +
+    'font:15px/1.55 system-ui,-apple-system,"Segoe UI Variable Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;' +
+    'display:flex;gap:' + (bar ? '16px 32px;flex-wrap:wrap;align-items:center' : '20px;flex-direction:column') + '}' +
     '.t{flex:' + (bar ? '1 1 360px' : 'none') + '}svg{display:block;flex:none}' +
-    'h2{margin:0 0 6px;font-size:16px;font-weight:700}p{margin:0}' +
-    'a,button{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}' +
-    'a:hover,button:hover{text-decoration-thickness:2px}' +
+    'h2{margin:0 0 6px;font-size:18px;line-height:1.3;font-weight:600;letter-spacing:-.01em}p{margin:0;color:var(--mu)}' +
+    'button{font:inherit;background:none;border:0;padding:0;cursor:pointer}' +
+    'a,button{color:var(--fg);font-weight:500;text-decoration:underline 1px var(--ul);text-underline-offset:4px}' +
+    'a:hover,button:hover{text-decoration-color:currentColor}' +
     '.b{display:flex;flex-wrap:wrap;gap:12px 28px}' +
-    'button{font:inherit;letter-spacing:inherit;background:none;border:0;padding:0;cursor:pointer}' +
     ':focus-visible{outline:2px solid currentColor;outline-offset:4px}' +
     '</style>' +
     '<div class="k" role="dialog" aria-live="polite" aria-labelledby="kt">' + bun +
