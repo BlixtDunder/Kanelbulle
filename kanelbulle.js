@@ -12,8 +12,8 @@
   var sv = lang.indexOf('sv') === 0;
   var t = sv ? {
     title: 'Vi äter kanelbullar',
-    body: 'Den här webbplatsen använder kanelbullar för att förbättra din upplevelse. ' +
-      'Den 4 oktober är det Kanelbullens dag, och genom att fortsätta surfa godkänner du att ta en fika.',
+    body: 'Ägarna till den här webbplatsen stöttar fika. ' +
+      'Den 4 oktober är det Kanelbullens dag, och genom att fortsätta surfa godkänner du att ta en fika med kanelbulle.',
     accept: 'Acceptera alla bullar',
     necessary: 'Endast nödvändiga bullar',
     bakery: 'Hitta närmaste bageri',
@@ -22,8 +22,8 @@
     recipeUrl: 'https://www.arla.se/recept/kanelbullar/'
   } : {
     title: 'We eat cinnamon buns',
-    body: 'This website uses kanelbullar (cinnamon buns) to improve your experience. ' +
-      'October 4th is Kanelbullens dag, Sweden’s Cinnamon Bun Day. By continuing to browse you agree to have a fika.',
+    body: 'The owners of this website support fika, the Swedish coffee break. ' +
+      'October 4th is Kanelbullens dag, Sweden’s Cinnamon Bun Day, and by continuing to browse you agree to have a fika with a cinnamon bun.',
     accept: 'Accept all buns',
     necessary: 'Only necessary buns',
     bakery: 'Find the nearest bakery',
