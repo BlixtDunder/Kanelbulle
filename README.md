@@ -1,6 +1,6 @@
 # Kanelbulle
 
-A cookie consent banner, except it's about the other kind of cookie. On October 4th, Kanelbullens dag (Cinnamon Bun Day), it tells your visitors that your site "uses cinnamon buns" and links them to the nearest bakery and a recipe.
+A cookie consent banner, except it's about the other kind of cookie. On October 4th, Kanelbullens dag (Cinnamon Bun Day), it tells your visitors "we eat cinnamon buns" and links them to the nearest bakery and a recipe.
 
 - About 5 KB, no dependencies, no build step
 - Shows up only on October 4th, and only once per visitor per year
