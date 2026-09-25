@@ -36,3 +36,5 @@ Open `index.html` in a browser. The demo pretends it's October 4th and lets you 
 ## License
 
 GPL-3.0, see [LICENSE](LICENSE).
+
+Made by [Blixt & Dunder](https://www.blixtdunder.com).
