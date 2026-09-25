@@ -6,6 +6,7 @@ A cookie consent banner, except it's about the other kind of cookie. On October 
 - Shows up only on October 4th, and only once per visitor per year
 - Swedish on Swedish sites (`<html lang="sv">`), English everywhere else
 - Styles live in a Shadow DOM, so your CSS won't touch the banner and the banner won't touch your CSS
+- Light and dark mode, following the visitor's system setting unless you pick one
 - Sets no cookies (the dismissal goes in `localStorage`)
 
 ## Usage
@@ -23,6 +24,7 @@ Set options as `data-` attributes on the script tag, or through `window.Kanelbul
 | Option     | Values                                                                               | Default                      |
 |------------|--------------------------------------------------------------------------------------|------------------------------|
 | `position` | `bottom`, `top`, `bottom-left`, `bottom-right`, `top-left`, `top-right`, `center`     | `bottom`                     |
+| `theme`    | `auto`, `light`, `dark`                                                               | `auto` (follows the visitor's system setting) |
 | `lang`     | `sv`, `en`                                                                           | from `<html lang>`           |
 | `recipe`   | a URL to your favourite recipe                                                       | Arla (sv) / Scandinavian Cookbook (en) |
 

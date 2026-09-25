@@ -18,7 +18,7 @@
   <script>
     var q = new URLSearchParams(location.search);
     document.documentElement.lang = q.get('lang') || 'en';
-    window.KanelbulleConfig = { position: q.get('position') || 'bottom' };
+    window.KanelbulleConfig = { position: q.get('position') || 'bottom', theme: q.get('theme') || 'auto' };
     // Pretend it's Kanelbullens dag so the banner shows in the demo
     var RealDate = Date;
     window.Date = class extends RealDate {
@@ -28,7 +28,11 @@
       ['bottom', 'top', 'bottom-left', 'bottom-right', 'top-left', 'top-right', 'center']
         .map(function (p) {
           return p + ': <a href="?position=' + p + '&lang=sv">sv</a><a href="?position=' + p + '&lang=en">en</a>';
-        }).join('<br>');
+        }).join('<br>') +
+      '<br><br>theme: ' + ['auto', 'light', 'dark'].map(function (th) {
+        var p = new URLSearchParams(location.search); p.set('theme', th);
+        return '<a href="?' + p + '">' + th + '</a>';
+      }).join('');
   </script>
   <script src="kanelbulle.js"></script>
 </body>

@@ -53,19 +53,23 @@
     '<rect x="24" y="19" width="2" height="2" rx=".6"/><rect x="10" y="23" width="2" height="2" rx=".6"/>' +
     '<rect x="17" y="11" width="2" height="2" rx=".6"/><rect x="5" y="16" width="2" height="2" rx=".6"/></g></svg>';
 
+  var dark = '.k{--bg:#2b1d14;--fg:#f5e6d3;--ac:#e8a45c;--on:#2b1d14;--sh:rgba(0,0,0,.5)}';
+  var theme = opt.theme === 'dark' ? dark : opt.theme === 'light' ? '' : '@media (prefers-color-scheme:dark){' + dark + '}';
+
   var host = document.createElement('div');
   var root = host.attachShadow ? host.attachShadow({ mode: 'open' }) : host;
   root.innerHTML =
     '<style>' +
+    '.k{--bg:#fff8ee;--fg:#4a2c17;--ac:#a0522d;--on:#fff;--sh:rgba(74,44,23,.25)}' + theme +
     '.k{position:fixed;z-index:2147483647;' + place + ';box-sizing:border-box;margin:0 auto;padding:20px 24px;' +
-    'background:#fff8ee;color:#4a2c17;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;' +
-    'box-shadow:0 4px 24px rgba(74,44,23,.25);border-radius:' + (bar ? '0' : '12px') + ';' +
+    'background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;' +
+    'box-shadow:0 4px 24px var(--sh);border-radius:' + (bar ? '0' : '12px') + ';' +
     'display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;' + (bar ? '' : 'flex-direction:column;align-items:stretch') + '}' +
     '.t{flex:' + (bar ? '1 1 320px' : 'none') + '}h2{margin:0 0 4px;font-size:17px;display:flex;align-items:center;gap:8px}svg{flex:none}p{margin:0}' +
-    '.l{margin-top:8px;display:flex;flex-wrap:wrap;gap:4px 16px}a{color:#a0522d;font-weight:600}' +
+    '.l{margin-top:8px;display:flex;flex-wrap:wrap;gap:4px 16px}a{color:var(--ac);font-weight:600}' +
     '.b{display:flex;flex-wrap:wrap;gap:8px}button{font:inherit;font-weight:600;cursor:pointer;padding:10px 16px;' +
-    'border-radius:8px;border:2px solid #a0522d;background:#a0522d;color:#fff;flex:1 1 auto}' +
-    'button+button{background:transparent;color:#a0522d}button:hover{filter:brightness(1.1)}' +
+    'border-radius:8px;border:2px solid var(--ac);background:var(--ac);color:var(--on);flex:1 1 auto}' +
+    'button+button{background:transparent;color:var(--ac)}button:hover{filter:brightness(1.1)}' +
     '</style>' +
     '<div class="k" role="dialog" aria-live="polite" aria-labelledby="kt">' +
     '<div class="t"><h2 id="kt">' + bun + t.title + '</h2><p>' + t.body + '</p>' +
