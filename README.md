@@ -6,7 +6,7 @@ A cookie consent banner, except it's about the other kind of cookie. On October 
 - Shows up only on October 4th, and only once per visitor per year
 - Swedish on Swedish sites (`<html lang="sv">`), English everywhere else
 - Styles live in a Shadow DOM, so your CSS won't touch the banner and the banner won't touch your CSS
-- Minimal black-and-white design with a line-drawn kanelbulle icon
+- Minimal black-and-white design with a kanelbulle icon
 - Light and dark mode, following the visitor's system setting unless you pick one
 - Sets no cookies (the dismissal goes in `localStorage`)
 

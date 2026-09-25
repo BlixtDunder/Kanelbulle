@@ -45,11 +45,13 @@
   var place = pos[opt.position] || pos.bottom;
   var bar = opt.position === 'top' || opt.position === 'bottom' || !pos[opt.position];
 
-  var bun = '<svg viewBox="0 0 32 32" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" ' +
-    'stroke-linecap="round" aria-hidden="true"><circle cx="16" cy="16" r="14"/>' +
-    '<path d="M14 16a2 2 0 1 1 4 0a4 4 0 1 1-8 0a6 6 0 1 1 12 0a8 8 0 1 1-16 0a10 10 0 1 1 20 0"/>' +
-    '<g fill="currentColor" stroke="none"><circle cx="21.7" cy="10.3" r=".9"/><circle cx="8" cy="8.5" r=".9"/>' +
-    '<circle cx="17" cy="21.2" r=".9"/><circle cx="8.5" cy="24.5" r=".9"/></g></svg>';
+  var bun = '<svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true">' +
+    '<circle cx="16" cy="16" r="14" fill="#d9954a"/>' +
+    '<path d="M14 16a2 2 0 1 1 4 0a4 4 0 1 1-8 0a6 6 0 1 1 12 0a8 8 0 1 1-16 0a10 10 0 1 1 20 0" ' +
+    'fill="none" stroke="#8b4513" stroke-width="2" stroke-linecap="round"/><g fill="#fff">' +
+    '<rect x="8" y="8" width="2" height="2" rx=".6"/><rect x="21" y="7" width="2" height="2" rx=".6"/>' +
+    '<rect x="24" y="19" width="2" height="2" rx=".6"/><rect x="10" y="23" width="2" height="2" rx=".6"/>' +
+    '<rect x="17" y="11" width="2" height="2" rx=".6"/><rect x="5" y="16" width="2" height="2" rx=".6"/></g></svg>';
 
   var dark = '.k{--bg:#000;--fg:#fff;--sh:none}';
   var theme = opt.theme === 'dark' ? dark : opt.theme === 'light' ? '' : '@media (prefers-color-scheme:dark){' + dark + '}';
