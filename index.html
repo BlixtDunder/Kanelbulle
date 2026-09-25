@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kanelbulle.js demo</title>
+  <style>
+    body { font: 16px/1.5 system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; color: #333; }
+    a { margin-right: 8px; }
+  </style>
+</head>
+<body>
+  <h1>kanelbulle.js</h1>
+  <p>A cookie banner, but for buns. Pick a position and a language:</p>
+  <p id="links"></p>
+  <p><button onclick="localStorage.clear(); location.reload()">Reset dismissal</button></p>
+
+  <script>
+    var q = new URLSearchParams(location.search);
+    document.documentElement.lang = q.get('lang') || 'en';
+    window.KanelbulleConfig = { always: true, position: q.get('position') || 'bottom' };
+    document.getElementById('links').innerHTML =
+      ['bottom', 'top', 'bottom-left', 'bottom-right', 'top-left', 'top-right', 'center']
+        .map(function (p) {
+          return p + ': <a href="?position=' + p + '&lang=sv">sv</a><a href="?position=' + p + '&lang=en">en</a>';
+        }).join('<br>');
+  </script>
+  <script src="kanelbulle.js"></script>
+</body>
+</html>
