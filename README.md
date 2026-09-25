@@ -31,7 +31,7 @@ Set options as `data-` attributes on the script tag, or through `window.Kanelbul
 
 ## Demo
 
-Open `index.html` in a browser. The demo pretends it's October 4th and lets you switch position and language.
+Try it at **https://blixtdunder.github.io/Kanelbulle/**, or open `index.html` locally. The demo pretends it's October 4th and lets you switch position, language and theme.
 
 ## License
 
