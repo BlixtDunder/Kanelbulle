@@ -1,4 +1,4 @@
-/*! kanelbulle.js – a cookie banner, but for buns. GPL-3.0 License. */
+/*! Kanelbulle – a cookie banner, but for buns. GPL-3.0 License. */
 (function () {
   var script = document.currentScript;
   var opt = Object.assign({}, script && script.dataset, window.KanelbulleConfig);

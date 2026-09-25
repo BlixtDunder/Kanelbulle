@@ -1,4 +1,4 @@
-# kanelbulle.js 🍩
+# Kanelbulle 🍩
 
 A cookie consent banner, except it's about the other kind of cookie. On October 4th, Kanelbullens dag (Cinnamon Bun Day), it tells your visitors that your site "uses cinnamon buns" and links them to the nearest bakery and a recipe.
 
