@@ -13,7 +13,7 @@ A cookie consent banner, except it's about the other kind of cookie. On October 
 ## Usage
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/BlixtDunder/kanelbulle/kanelbulle.min.js" data-position="bottom-right" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/BlixtDunder/kanelbulle/kanelbulle.min.js" defer></script>
 ```
 
 jsDelivr minifies `.min.js` automatically. You can also just copy `kanelbulle.js` onto your own server.
@@ -24,7 +24,7 @@ Set options as `data-` attributes on the script tag, or through `window.Kanelbul
 
 | Option     | Values                                                                               | Default                      |
 |------------|--------------------------------------------------------------------------------------|------------------------------|
-| `position` | `bottom`, `top`, `bottom-left`, `bottom-right`, `top-left`, `top-right`, `center`     | `bottom`                     |
+| `position` | `bottom-left`, `bottom-right`, `top-left`, `top-right`, `center`, `bottom`, `top`     | `bottom-left`                |
 | `theme`    | `auto`, `light`, `dark`                                                               | `auto` (follows the visitor's system setting) |
 | `lang`     | `sv`, `en`                                                                           | from `<html lang>`           |
 | `recipe`   | a URL to your favourite recipe                                                       | Arla (sv) / Scandinavian Cookbook (en) |

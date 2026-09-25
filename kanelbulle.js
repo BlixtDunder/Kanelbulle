@@ -42,8 +42,8 @@
     'bottom-right': 'bottom:16px;right:16px;max-width:420px',
     'center': 'top:50%;left:50%;transform:translate(-50%,-50%);max-width:480px'
   };
-  var place = pos[opt.position] || pos.bottom;
-  var bar = opt.position === 'top' || opt.position === 'bottom' || !pos[opt.position];
+  var place = pos[opt.position] || pos['bottom-left'];
+  var bar = opt.position === 'top' || opt.position === 'bottom';
 
   var bun = '<svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true">' +
     '<circle cx="16" cy="16" r="14" fill="#d9954a"/>' +
