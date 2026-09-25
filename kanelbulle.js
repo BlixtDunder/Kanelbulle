@@ -3,10 +3,9 @@
   var script = document.currentScript;
   var opt = Object.assign({}, script && script.dataset, window.KanelbulleConfig);
   var now = new Date();
-  var isDay = now.getMonth() === 9 && now.getDate() === 4; // October 4th
   var key = 'kanelbulle-' + now.getFullYear();
 
-  if (!isDay && String(opt.always) !== 'true') return;
+  if (now.getMonth() !== 9 || now.getDate() !== 4) return; // Kanelbullens dag, October 4th only
   try { if (localStorage.getItem(key)) return; } catch (e) {}
 
   var lang = (opt.lang || document.documentElement.lang || '').toLowerCase();
@@ -46,6 +45,14 @@
   var place = pos[opt.position] || pos.bottom;
   var bar = opt.position === 'top' || opt.position === 'bottom' || !pos[opt.position];
 
+  var bun = '<svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">' +
+    '<circle cx="16" cy="16" r="14" fill="#d9954a"/>' +
+    '<path d="M14 16a2 2 0 1 1 4 0a4 4 0 1 1-8 0a6 6 0 1 1 12 0a8 8 0 1 1-16 0a10 10 0 1 1 20 0" ' +
+    'fill="none" stroke="#8b4513" stroke-width="2" stroke-linecap="round"/><g fill="#fff">' +
+    '<rect x="8" y="8" width="2" height="2" rx=".6"/><rect x="21" y="7" width="2" height="2" rx=".6"/>' +
+    '<rect x="24" y="19" width="2" height="2" rx=".6"/><rect x="10" y="23" width="2" height="2" rx=".6"/>' +
+    '<rect x="17" y="11" width="2" height="2" rx=".6"/><rect x="5" y="16" width="2" height="2" rx=".6"/></g></svg>';
+
   var host = document.createElement('div');
   var root = host.attachShadow ? host.attachShadow({ mode: 'open' }) : host;
   root.innerHTML =
@@ -54,15 +61,15 @@
     'background:#fff8ee;color:#4a2c17;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;' +
     'box-shadow:0 4px 24px rgba(74,44,23,.25);border-radius:' + (bar ? '0' : '12px') + ';' +
     'display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;' + (bar ? '' : 'flex-direction:column;align-items:stretch') + '}' +
-    '.t{flex:' + (bar ? '1 1 320px' : 'none') + '}h2{margin:0 0 4px;font-size:17px}p{margin:0}' +
+    '.t{flex:' + (bar ? '1 1 320px' : 'none') + '}h2{margin:0 0 4px;font-size:17px;display:flex;align-items:center;gap:8px}svg{flex:none}p{margin:0}' +
     '.l{margin-top:8px;display:flex;flex-wrap:wrap;gap:4px 16px}a{color:#a0522d;font-weight:600}' +
     '.b{display:flex;flex-wrap:wrap;gap:8px}button{font:inherit;font-weight:600;cursor:pointer;padding:10px 16px;' +
     'border-radius:8px;border:2px solid #a0522d;background:#a0522d;color:#fff;flex:1 1 auto}' +
     'button+button{background:transparent;color:#a0522d}button:hover{filter:brightness(1.1)}' +
     '</style>' +
     '<div class="k" role="dialog" aria-live="polite" aria-labelledby="kt">' +
-    '<div class="t"><h2 id="kt">🍩 ' + t.title + '</h2><p>' + t.body + '</p>' +
-    '<div class="l"><a href="' + t.bakeryUrl + '" target="_blank" rel="noopener">🥐 ' + t.bakery + '</a>' +
+    '<div class="t"><h2 id="kt">' + bun + t.title + '</h2><p>' + t.body + '</p>' +
+    '<div class="l"><a href="' + t.bakeryUrl + '" target="_blank" rel="noopener">📍 ' + t.bakery + '</a>' +
     '<a href="' + t.recipeUrl + '" target="_blank" rel="noopener">📖 ' + t.recipe + '</a></div></div>' +
     '<div class="b"><button>' + t.accept + '</button><button>' + t.necessary + '</button></div></div>';
 

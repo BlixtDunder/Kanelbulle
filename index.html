@@ -18,7 +18,12 @@
   <script>
     var q = new URLSearchParams(location.search);
     document.documentElement.lang = q.get('lang') || 'en';
-    window.KanelbulleConfig = { always: true, position: q.get('position') || 'bottom' };
+    window.KanelbulleConfig = { position: q.get('position') || 'bottom' };
+    // Pretend it's Kanelbullens dag so the banner shows in the demo
+    var RealDate = Date;
+    window.Date = class extends RealDate {
+      constructor(...a) { super(...(a.length ? a : [new RealDate().getFullYear(), 9, 4])); }
+    };
     document.getElementById('links').innerHTML =
       ['bottom', 'top', 'bottom-left', 'bottom-right', 'top-left', 'top-right', 'center']
         .map(function (p) {
