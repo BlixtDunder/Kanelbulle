@@ -2,7 +2,7 @@
 
 A cookie consent banner, except it's about the other kind of cookie. On October 4th, Kanelbullens dag (Cinnamon Bun Day), it shows your visitors "Our cinnamon bun policy" and links them to the nearest bakery and a recipe.
 
-- About 5 KB, no dependencies, no build step
+- About 3 KB over the wire (gzipped), no dependencies, no build step
 - Shows up only on October 4th, and only once per visitor per year
 - Optional countdown in the days before, reminding visitors to get prepared
 - Swedish on Swedish sites (`<html lang="sv">`), English everywhere else
