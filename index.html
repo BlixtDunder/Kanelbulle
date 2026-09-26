@@ -53,6 +53,7 @@
   <script>
     var q = new URLSearchParams(location.search);
     var choices = {
+      mode: ['day', 'countdown'],
       position: ['bottom-left', 'bottom-right', 'top-left', 'top-right', 'center', 'bottom', 'top'],
       lang: ['en', 'sv'],
       theme: ['auto', 'light', 'dark']
@@ -67,23 +68,21 @@
       }).join('') + '</dd>';
     }).join('');
 
-    var attrs = (cfg.position !== 'bottom-left' ? ' data-position="' + cfg.position + '"' : '') +
+    var attrs = (cfg.mode === 'countdown' ? ' data-countdown="7"' : '') +
+      (cfg.position !== 'bottom-left' ? ' data-position="' + cfg.position + '"' : '') +
       (cfg.theme !== 'auto' ? ' data-theme="' + cfg.theme + '"' : '');
-    var snippet = '<script src="https://cdn.jsdelivr.net/gh/BlixtDunder/Kanelbulle/kanelbulle.min.js"' + attrs + ' defer><\/script>';
+    var snippet = '<script src="https://cdn.jsdelivr.net/gh/BlixtDunder/Kanelbulle@1/kanelbulle.min.js"' + attrs + ' defer><\/script>';
     document.getElementById('snippet').textContent = snippet;
     document.getElementById('copy').onclick = function () {
       navigator.clipboard.writeText(snippet);
       this.textContent = 'Copied';
     };
-    document.getElementById('reset').onclick = function () { localStorage.clear(); location.reload(); };
+    document.getElementById('reset').onclick = function () { location.reload(); };
 
     document.documentElement.lang = cfg.lang;
     window.KanelbulleConfig = { position: cfg.position, theme: cfg.theme };
-    // Pretend it's Kanelbullens dag so the banner shows in the demo
-    var RealDate = Date;
-    window.Date = class extends RealDate {
-      constructor(...a) { super(...(a.length ? a : [new RealDate().getFullYear(), 9, 4])); }
-    };
+    // Use the built-in preview so the banner shows whatever the date
+    history.replaceState(null, '', location.search + (cfg.mode === 'countdown' ? '#kanelbulle-3' : '#kanelbulle'));
   </script>
   <script src="kanelbulle.js"></script>
 </body>
