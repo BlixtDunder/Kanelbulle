@@ -39,6 +39,10 @@ Set options as `data-` attributes on the script tag, or through `window.Kanelbul
 
 Try it at **https://blixtdunder.github.io/Kanelbulle/**, or open `index.html` locally. The demo lets you switch between the day and countdown versions, position, language and theme.
 
+## Press kit
+
+Screenshots, icon and press texts in English and Swedish are in [`press/`](press/), or download them all as [kanelbulle-press-kit.zip](press/kanelbulle-press-kit.zip).
+
 ## License
 
 GPL-3.0, see [LICENSE](LICENSE).
