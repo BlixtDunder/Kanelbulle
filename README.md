@@ -1,5 +1,7 @@
 # Kanelbulle
 
+<a href="https://www.producthunt.com/products/kanelbulle?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-kanelbulle" target="_blank" rel="noopener noreferrer"><img alt="Kanelbulle - A cookie banner, but for cinnamon buns | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1262284&amp;theme=light&amp;t=1790604002762"></a>
+
 A cookie consent banner, except it's about the other kind of cookie. On October 4th, Kanelbullens dag (Cinnamon Bun Day), it shows your visitors "Our cinnamon bun policy" and links them to the nearest bakery and a recipe.
 
 - About 3 KB over the wire (gzipped), no dependencies, no build step
