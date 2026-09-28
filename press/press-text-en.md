@@ -36,10 +36,6 @@ Kanelbullens dag was started in 1999 by the Swedish Home Baking Council (Hembakn
 | Demo | https://blixtdunder.github.io/Kanelbulle/ |
 | Source code | https://github.com/BlixtDunder/Kanelbulle |
 
-## Quote
-
-> [Add a quote from Blixt & Dunder here, with the name and title of the person quoted.]
-
 ## Images
 
 The images in this folder may be used in coverage of Kanelbulle. Download them all as [kanelbulle-press-kit.zip](kanelbulle-press-kit.zip).

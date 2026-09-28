@@ -36,10 +36,6 @@ Kanelbullens dag instiftades 1999 av Hembakningsrådet och firas varje år den 4
 | Demo | https://blixtdunder.github.io/Kanelbulle/ |
 | Källkod | https://github.com/BlixtDunder/Kanelbulle |
 
-## Citat
-
-> [Lägg till ett citat från Blixt & Dunder här, med namn och titel på den som citeras.]
-
 ## Bilder
 
 Bilderna i den här mappen får användas i rapportering om Kanelbulle. Ladda ner alla som [kanelbulle-press-kit.zip](kanelbulle-press-kit.zip).
